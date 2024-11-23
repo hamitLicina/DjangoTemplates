@@ -11,7 +11,10 @@ def weather_view(request):
         'city': 'istanbul',
         'temperature': 25,
         'description': 'Güneşli',
-        'icon': 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+        'icon': 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+        "paris": [22, 26, 34], 
+        "user_premium": True,
+        "test": "Test test Test TEst TeSt test "
     }
     return render(request, 'template_app/weather.html', context=weather_dictionary)
 def login_view(request):

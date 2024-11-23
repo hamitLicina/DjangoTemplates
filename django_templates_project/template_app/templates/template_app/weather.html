@@ -9,5 +9,20 @@
     <h1>Weather Report</h1>
     <!-- Jinja Syntax -->
      <h3>{{city}} sehrinin sicakligi {{temperature}} Durumu : {{description}} </h3>
+     {% for item in paris %}
+        <p>{{item}}</p>
+     {% endfor %}
+     {% if user_premium %}
+        <h3>User Premium !!!</h3>
+        {% for item in paris %}
+        <p>{{item}}</p>
+        {% endfor %}
+     {% endif %}
+     <br>
+     <h2>
+        {{test | lower }}
+     </h2>
+     <br>
+     <h2><a href="{% url 'index' %}">Go to Index</h2></h2>
 </body>
 </html>
