@@ -6,6 +6,14 @@ from django.urls import reverse_lazy
 
 def index(request):
     return render(request, 'template_app/first.html')
+def weather_view(request):
+    weather_dictionary = {
+        'city': 'istanbul',
+        'temperature': 25,
+        'description': 'Güneşli',
+        'icon': 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    }
+    return render(request, 'template_app/weather.html', context=weather_dictionary)
 def login_view(request):
     return render(request, 'template_app/login.html')
 # return HttpResponse('Login')
